@@ -1,5 +1,25 @@
-# spike_oop_wrapper  
-### A Python Wrapper for Maintainable, Educational Robotics
+# OOP Spike 3 module
+
+Python object-oriented wrapper for LEGO® Spike™ 3.
+Allows return object-oriented programing to Spike™ Prime 3 without changing firmware. 
+
+
+Example of typical program with the oop wrapper:
+```python
+from oop.parameters import Port, Direction, Stop
+from oop.devices import Motor
+from oop.robotics import DriveBase
+
+left_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
+right_motor = Motor(Port.B)
+
+robot = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=8*16)
+
+for _ in range(4):
+    robot.straight(100)
+    robot.turn(90)
+
+```
 
 ## Overview
 
@@ -44,3 +64,6 @@ The module is organized into five main files:
 Example:
 
 ```python
+```
+
+LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.
